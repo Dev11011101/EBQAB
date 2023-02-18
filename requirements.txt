@@ -1,0 +1,6 @@
+allennlp
+allennlp-models
+google
+bs4
+wikipedia-api
+wolframalpha
