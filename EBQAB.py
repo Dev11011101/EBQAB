@@ -1,3 +1,4 @@
+#ELMo-BiDAF Question Answering Bot (EBQAB)
 from allennlp.predictors.predictor import Predictor
 import allennlp_models.rc
 import textwrap
@@ -127,5 +128,4 @@ while True:
         sys.exit()
     else:
         print("Invalid command. Type \"/ask\" to ask a question or \"/help\" for usage.")
-
 
