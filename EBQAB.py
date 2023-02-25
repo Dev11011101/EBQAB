@@ -32,11 +32,12 @@ def answer(question):
                          )
             for paragraph in information.split("\n"):
                 if prediction["best_span_str"] in paragraph:
-                    ans += paragraph.strip()
+                    for ans_tok in paragraph.split():
+                        ans += ans_tok+" "
             if not ans:
-                answers.append(prediction["best_span_str"])
+                answers.append(prediction["best_span_str"].strip())
             else:
-                answers.append(ans)
+                answers.append(ans.strip())
         except:
             continue
     if len(answers) == 0:
@@ -128,4 +129,3 @@ while True:
         sys.exit()
     else:
         print("Invalid command. Type \"/ask\" to ask a question or \"/help\" for usage.")
-
